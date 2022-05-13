@@ -132,10 +132,7 @@ var options = {
     'min-width': '575px',
     'margin-top': "5px",
 };
-
-export default {
     generate(pdf, values) {
-
         const doc = new jsPDF({
             orientation: 'p',
             unit: 'mm',
@@ -254,4 +251,5 @@ export default {
                 break;
                     }
     },
-}
+
+    
