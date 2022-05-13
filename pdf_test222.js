@@ -107,13 +107,13 @@ var app = new Vue({
             })
             console.log("updateOrganismeDetails end");
         },
-        generatePDF($this) {
+        generatePDF: function($this) {
             let currentOrganisme = document.getElementById('organismeModal').value;
             const values = { ...Forms.getValues('.form-control'), ...Forms.getValues('.form-select'), currentOrganisme};
             Pdf.generate($this.srcElement.dataset.pdf, values);
         },
 
-        function Gmail(event) {
+        Gmail: function(event) {
             let orgaName = document.getElementById('organismeModal').value;
             let orgaMail = document.getElementById('MailorgaModal').value;
             let prenom = document.getElementById('PrenomModal').value;
